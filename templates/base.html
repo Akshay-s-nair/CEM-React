@@ -1,0 +1,109 @@
+ <!DOCTYPE html>
+ <html lang="en">
+     <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+        crossorigin="anonymous"
+      />
+      <script
+        src="https://kit.fontawesome.com/f5cbf694f9.js"
+        crossorigin="anonymous"
+      ></script>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+        crossorigin="anonymous"
+      />
+
+      <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{url_for('static',filename='CSS/base.css')}}"
+    />
+   
+      {% block head  %}
+
+      {% endblock  %}
+     
+ </head>
+
+
+ <body> 
+     
+     <!----------------------Navbar------------------------>
+<div class="navv">
+  <nav class="navbar">
+    <!-- <h1 class="shippi">Shippi</h1> -->
+    <a href="#"><img
+      id="logo1"
+      src="{{url_for('static',filename='img/logo2.png')}}"
+      alt="logo"
+    /></a>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+
+    <div class="nav-links">
+      <div class="side">
+        <form class="example" action="#" style="margin:auto;max-width:300px">
+          <input type="text" placeholder="  Search.." name="search2">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+
+        <a href="/login/cart"><img
+          id="logo"
+          src="{{url_for('static',filename='img/shopping-cart.png')}}"
+          width="45px"
+          alt="logo"
+        /></a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+
+  <script> 
+    // get the navbar element
+    const navbar = document.querySelector('nav');
+    // define the distance to trigger the color change
+    const scrollDistance = 50;
+    // add a scroll event listener to the window object
+    window.addEventListener('scroll', () => {
+      // get the current scrollY value
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > scrollDistance) {
+        // the user has scrolled past the distance
+        navbar.classList.add('scrolled-down');
+      } else {
+        // the user has not scrolled past the distance
+        navbar.classList.remove('scrolled-down');
+      }
+    });
+    
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+   
+  {% block body  %}
+
+  {% endblock  %}
+ 
+ </body>
+ </html>
+ 
+ 
+ 
+ 
