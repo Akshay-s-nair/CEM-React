@@ -1,0 +1,138 @@
+body{
+    background-color: rgb(208, 207, 251);
+}
+
+nav{
+    height: 100px;
+    background-color: #4a4a4a61;
+    border-radius: 0px 0px 30px 30px;
+}
+
+
+.parent{
+    background-color: aliceblue;
+    min-height:300px;   
+    width: 400px;
+    border-radius: 20px;
+    padding: 20px;
+}
+.gp{
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.but{
+    display: flex;
+    justify-content:end ;
+    padding: 10px;
+}
+button{
+    margin: 10PX;
+}
+/* div {
+    margin-bottom: 10px;
+  } */
+label {
+    font-size: large;
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+}
+
+button{
+    background-color: #0b7dda;
+    color: aliceblue;
+    border-radius: 15px;
+    padding: 10px;
+    font-weight:700;
+    border: 0px
+}
+button:hover{
+    background-color: blue;
+    transition: 0.4s;
+}
+button:focus {     
+    background-color:black;    
+}
+input[type='submit']:hover{
+    background-color: rgb(15, 198, 5);
+   
+    transition: 0.4s;
+
+}
+input{
+    background-color: rgb(222, 222, 222);
+    border-radius: 5px;
+}
+input{
+    border: 0px;
+    border-radius: 10px;
+}
+input[type='submit']{
+    background-color: rgb(5, 119, 5);
+    color: aliceblue;
+    font-weight:700;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 10px;
+    position: relative;
+    left: 47%;
+    bottom: 20%;
+    transform: translate(-50%);
+}
+
+.flashes{
+color: brown;
+text-align: center;
+}
+
+#logo1{
+    width: 300px;
+    position: absolute;
+    top: 3.5%;
+    left: 2%;
+}
+.headings{
+    text-align: center;
+    padding: 15px;
+}
+footer{
+    margin-top: 35%;
+    height: 60px;
+    background-color:#4a4a4a54;
+
+}
+@media (max-width:700px) {
+    nav{
+        height: 65px;
+        width: 405px;
+        background-color: #4a4a4a61;
+        border-radius: 0px 0px 30px 30px;
+    }
+    button{
+        padding: 7px;
+    }
+    
+    #logo1{
+        width: 300px;
+        position: absolute;
+        top: 12%;
+        left: 28%;
+        z-index: 11;
+    }
+    .gp{
+        margin: 15px;
+        left: 50%;
+        top: 55%;
+        transform: translate(-50%,-50%);
+    }
+    footer{
+        margin-top: 150%;
+        width: 405px;
+    }
+    .but{
+        padding: 0px;
+    }
+}

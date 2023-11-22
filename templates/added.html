@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block head  %}
+
+<link
+      rel="stylesheet"
+      type="text/css"
+      href="{{url_for('static',filename='CSS/index.css')}}"
+    />
+    <script>
+      setTimeout(function () {
+            window.history.back();
+        }, 2000);
+    </script>
+{% endblock head %}
+         
+
+{% block body  %}
+  <div class="container">
+    <div class="row">
+      <div class="parentadded">
+        <div class="successadded">
+          <div class="success">
+            <img src="https://c.tenor.com/Hw7f-4l0zgEAAAAM/check-green.gif" alt="">
+          </div>
+          <h4 class="txt">You will be redirected back to home page</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock body %}
